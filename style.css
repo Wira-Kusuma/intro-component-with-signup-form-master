@@ -16,7 +16,7 @@ body {
     padding: 0;
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
     background-image: url(images/bg-intro-desktop.png);
     background-color: var(--Red);
 }
@@ -138,6 +138,8 @@ button:active, .offer:active {
 @media screen and (max-width:700px) {
     body {
         font-size: 1rem;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
     main {
