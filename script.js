@@ -4,7 +4,6 @@ document.getElementById("submit").addEventListener("click", function () {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
-
   const valid = [];
   const inputs = [];
   const imgs = [];
