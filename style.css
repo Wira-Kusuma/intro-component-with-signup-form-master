@@ -37,7 +37,6 @@ header {
     display: flex;
     flex-direction: column;
     width: 40rem;
-    gap: 30px;
 }
 
 section {
@@ -72,7 +71,6 @@ h1 {
     width: 30rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -88,6 +86,7 @@ input {
     border: 1px solid rgba(0, 0, 0, 0.5);
     color: black;
     font-weight: 600;
+    margin-top: 5px;
 }
 
 input::placeholder {
@@ -101,6 +100,7 @@ input:focus {
 button {
     width: 100%;
     padding: 0.8rem;
+    margin-top: 10px;
     border: none;
     background-color: var(--Green);
     border-radius: 8px;
@@ -125,6 +125,14 @@ button:active, .offer:active {
     color: var(--Red);
     font-weight: 800;
     font-size: 0.8rem;
+}
+
+#valid1, #valid2, #valid3, #valid4 {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    color:red;
+    position: relative;
 }
 
 @media screen and (max-width:700px) {
