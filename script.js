@@ -4,6 +4,8 @@ document.getElementById("submit").addEventListener("click", function () {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
+  let input = document.querySelector("input");
+
   const valid = [];
   for (let i = 1; i <= 4; i++) {
     valid[i] = document.getElementById(`valid${i}`);
@@ -12,6 +14,7 @@ document.getElementById("submit").addEventListener("click", function () {
   // Validasi First Name
   if (firstName === "") {
     valid[1].innerText = "First name cannot be blank";
+    input.style.border="1px solid red";
   } else {
     valid[1].innerText = "";
   }
@@ -19,6 +22,7 @@ document.getElementById("submit").addEventListener("click", function () {
   // Validasi Last Name
   if (lastName === "") {
     valid[2].innerText = "Last name cannot be blank";
+    input.style.border="1px solid red";
   } else {
     valid[2].innerText = "";
   }
@@ -26,8 +30,10 @@ document.getElementById("submit").addEventListener("click", function () {
   // Validasi Email
   if (email === "") {
     valid[3].innerText = "Email cannot be blank";
+    input.style.border="1px solid red";
   } else if (!email.includes("@")) {
     valid[3].innerText = "Email must contain '@'";
+    input.style.border="1px solid red";
   } else {
     valid[3].innerText = "";
   }
@@ -35,9 +41,12 @@ document.getElementById("submit").addEventListener("click", function () {
   // Validasi Password
   if (password === "") {
     valid[4].innerText = "Password cannot be blank";
+    input.style.border="1px solid red";
   } else if (password.length <= 6) {
     valid[4].innerText="Password must be at least 6 characters";
+    input.style.border="1px solid red";
   } else {
     valid[4].innerText = "";
+    input.style.border="1px solid black";
   }
 });
