@@ -116,7 +116,7 @@ button:active, .offer:active {
 
 .faq p {
     width: 30rem;
-    color: black;
+    color: rgba(0, 0, 0, 0.5);
     font-size: 0.8rem;
     text-align: center;
 }
