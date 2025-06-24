@@ -2,6 +2,9 @@
     font-family: 'Poppins';
     box-sizing: border-box;
     color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 :root {
     --Red: hsl(0, 100%, 74%);
@@ -140,6 +143,7 @@ button:active, .offer:active {
         font-size: 1rem;
         overflow-y: auto;
         overflow-x: hidden;
+        background-image: url(images/bg-intro-mobile.png);
     }
 
     main {

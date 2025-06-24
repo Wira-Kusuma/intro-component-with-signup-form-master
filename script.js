@@ -4,49 +4,53 @@ document.getElementById("submit").addEventListener("click", function () {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
 
-  let input = document.querySelector("input");
 
   const valid = [];
+  const inputs = [];
   for (let i = 1; i <= 4; i++) {
     valid[i] = document.getElementById(`valid${i}`);
+    inputs[i] = document.querySelector(`.inputs${i}`);
   }
 
   // Validasi First Name
   if (firstName === "") {
     valid[1].innerText = "First name cannot be blank";
-    input.style.border="1px solid red";
+    inputs[1].style.border="1px solid red";
   } else {
     valid[1].innerText = "";
+    inputs[1].style.border="1px solid black";
   }
 
   // Validasi Last Name
   if (lastName === "") {
     valid[2].innerText = "Last name cannot be blank";
-    input.style.border="1px solid red";
+    inputs[2].style.border="1px solid red";
   } else {
     valid[2].innerText = "";
+    inputs[1].style.border="1px solid black";
   }
 
   // Validasi Email
   if (email === "") {
     valid[3].innerText = "Email cannot be blank";
-    input.style.border="1px solid red";
+    inputs[3].style.border="1px solid red";
   } else if (!email.includes("@")) {
     valid[3].innerText = "Email must contain '@'";
-    input.style.border="1px solid red";
+    inputs[3].style.border="1px solid red";
   } else {
     valid[3].innerText = "";
+    inputs[1].style.border="1px solid black";
   }
 
   // Validasi Password
   if (password === "") {
     valid[4].innerText = "Password cannot be blank";
-    input.style.border="1px solid red";
+    inputs[4].style.border="1px solid red";
   } else if (password.length <= 6) {
     valid[4].innerText="Password must be at least 6 characters";
-    input.style.border="1px solid red";
+    inputs[4].style.border="1px solid red";
   } else {
     valid[4].innerText = "";
-    input.style.border="1px solid black";
+    inputs[1].style.border="1px solid black";
   }
 });
