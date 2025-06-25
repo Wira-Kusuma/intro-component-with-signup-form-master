@@ -71,6 +71,7 @@ h1 {
 }
 
 .input-form {
+    position: relative;
     width: 30rem;
     display: flex;
     flex-direction: column;
@@ -91,6 +92,7 @@ input {
     border: 1px solid rgba(0, 0, 0, 0.5);
     color: black;
     font-weight: 600;
+    margin-top: 0.8rem;
 }
 
 input::placeholder {
@@ -101,11 +103,35 @@ input:focus {
     outline: none;
 }
 
-img {
+.imgs1 {
     display: none;
-    position: relative;
+    position: absolute;
     top: 40px;
-    right: 15px;
+    right: 30px;
+    user-select: none;
+}
+
+.imgs2 {
+    display: none;
+    position: absolute;
+    top: 122px;
+    right: 30px;
+    user-select: none;
+}
+
+.imgs3 {
+    display: none;
+    position: absolute;
+    top: 204px;
+    right: 30px;
+    user-select: none;
+}
+
+.imgs4 {
+    display: none;
+    position: absolute;
+    top: 286px;
+    right: 30px;
     user-select: none;
 }
 
