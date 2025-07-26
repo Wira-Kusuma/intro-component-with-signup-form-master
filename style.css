@@ -22,17 +22,17 @@ body {
     overflow: hidden;
     background-image: url(images/bg-intro-desktop.png);
     background-color: var(--Red);
+    display: grid;
+    place-items: center;
 }
 
 main {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     gap: 100px;
-    margin: auto;
-    margin-top: 3rem;
-    margin-bottom: 0;
     max-width: 80%;
 }
 
@@ -173,51 +173,101 @@ button:active, .offer:active {
     position: relative;
 }
 
-@media screen and (max-width:700px) {
-    body {
-        font-size: 1rem;
-        overflow-y: auto;
-        overflow-x: hidden;
-        background-image: url(images/bg-intro-mobile.png);
-    }
+    @media screen and (max-width: 700px) {
+        body {
+            font-size: 1rem;
+            overflow-y: auto;
+            overflow-x: hidden;
+            background-image: url(images/bg-intro-mobile.png);
+            padding: 1rem;
+            height: auto;
+            display: block;
+        }
 
-    main {
-        flex-direction: column;
-        width: 100%;
-        margin: auto;
-        gap: 30px;
-    }
+        main {
+            flex-direction: column;
+            width: 100%;
+            gap: 30px;
+            max-width: 100%;
+            align-items: stretch;
+            display: flex;
+        }
 
-    header {
-        text-align: center;
-        margin-top: 5rem;
-        gap: 0;
-    }
+        header {
+            text-align: center;
+            gap: 0.5rem;
+            width: 100%;
+            min-width: 0;
+            margin-bottom: 1rem;
+        }
 
-    header, section, form, .offer, .input-form {
-        width: 100%;
-    }
+        header, section, form, .offer, .input-form {
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+        }
 
-    section {
-        margin-bottom: 2rem;
-    }
+        section {
+            margin-bottom: 2rem;
+            width: 100%;
+            min-width: 0;
+            padding: 0;
+        }
 
-    .offer {
-        text-align: center;
-    }
+        .input-form {
+            width: 100%;
+            min-width: 0;
+            padding: 1rem 0.5rem;
+            box-sizing: border-box;
+        }
 
-    .offer p {
-        font-size: 0.8rem;
-    }
+        .offer {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+        }
 
-    .faq {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
+        .offer p {
+            font-size: 0.9rem;
+        }
 
-    h1 {
-        font-size: 2.5rem;
+        .faq {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .faq p {
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 0 0.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            word-break: break-word;
+            margin: 0.5rem 0;
+        }
+
+        input {
+            font-size: 1rem;
+            padding: 0.8rem 1rem;
+            margin-top: 0.5rem;
+        }
+
+        button {
+            font-size: 1rem;
+            padding: 0.8rem;
+        }
+
+        .imgs1, .imgs2, .imgs3, .imgs4 {
+            right: 15px;
+            top: auto;
+            transform: translateY(-50%);
+        }
     }
-}
