@@ -22,6 +22,7 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[1].innerText = "";
     inputs[1].style.border="1px solid black";
     imgs[1].style.display="none";
+    localStorage.setItem("firstName",firstName);
   }
 
   // Validasi Last Name
@@ -33,6 +34,7 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[2].innerText = "";
     inputs[2].style.border="1px solid black";
     imgs[2].style.display="none";
+    localStorage.setItem("lastName",lastName);
   }
 
   // Validasi Email
@@ -48,6 +50,7 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[3].innerText = "";
     inputs[3].style.border="1px solid black";
     imgs[3].style.display="none";
+    localStorage.setItem("email",email);
   }
 
   // Validasi Password
@@ -55,7 +58,7 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[4].innerText = "Password cannot be blank";
     inputs[4].style.border="1px solid red";
     imgs[4].style.display="block";
-  } else if (password.length <= 6) {
+  } else if (password.length <= 5) {
     valid[4].innerText="Password must be at least 6 characters";
     inputs[4].style.border="1px solid red";
     imgs[4].style.display="block";
@@ -63,5 +66,6 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[4].innerText = "";
     inputs[4].style.border="1px solid black";
     imgs[4].style.display="none";
+    localStorage.setItem("password",password);
   }
 });
