@@ -26,6 +26,10 @@ body {
     place-items: center;
 }
 
+img {
+    user-select: none;
+}
+
 main {
     width: 100%;
     display: flex;
@@ -65,6 +69,7 @@ h1 {
     align-items: center;
     font-weight: 300;
     transition: ease-in-out 0.1s all;
+    cursor: pointer;
 }
 .offer p span {
     font-weight: 800;
@@ -145,6 +150,7 @@ button {
     box-shadow: 0 5px 1px 0.5px rgba(78, 156, 78, 0.582);
     transition: ease-in-out 0.1s all;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 button:active, .offer:active {
@@ -159,10 +165,11 @@ button:active, .offer:active {
     text-align: center;
 }
 
-.faq p span {
+.faq p a {
     color: var(--Red);
     font-weight: 800;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 #valid1, #valid2, #valid3, #valid4 {
