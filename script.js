@@ -22,7 +22,6 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[1].innerText = "";
     inputs[1].style.border="1px solid black";
     imgs[1].style.display="none";
-    localStorage.setItem("firstName",firstName);
   }
 
   // Validasi Last Name
@@ -34,7 +33,6 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[2].innerText = "";
     inputs[2].style.border="1px solid black";
     imgs[2].style.display="none";
-    localStorage.setItem("lastName",lastName);
   }
 
   // Validasi Email
@@ -50,7 +48,6 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[3].innerText = "";
     inputs[3].style.border="1px solid black";
     imgs[3].style.display="none";
-    localStorage.setItem("email",email);
   }
 
   // Validasi Password
@@ -66,6 +63,18 @@ document.getElementById("submit").addEventListener("click", function () {
     valid[4].innerText = "";
     inputs[4].style.border="1px solid black";
     imgs[4].style.display="none";
-    localStorage.setItem("password",password);
   }
+  // when submit, saved in local storages
+  saveData();
 });
+
+// local storage
+function saveData() {
+  const data = {
+    firstName: document.getElementById("firstName").value.trim(),
+    lastName: document.getElementById("lastName").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    password: document.getElementById("password").value.trim()
+  };
+  localStorage.setItem("Data", JSON.stringify(data));
+}
